@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()" slot="icon-only">
+        <ion-icon class ="icon" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      VOLTAR
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-row class="title">
+    <ion-label class="lb-title">Solicite a firma do Cliente</ion-label>
+  </ion-row>
+  <signature-pad [options]="signaturePadOptions"  id="signatureCanvas"></signature-pad>
+  <ion-row>
+      <ion-col class="signup-col">
+          <ion-button (click)="drawClear()" expand="full" shape="round" class="submit-btn" type="button">Limpar</ion-button>
+      </ion-col>
+  </ion-row>  
+</ion-content>
+<ion-footer>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons class ="footer-btn">
+      <ion-button class = "footer-fSize" (click)="drawComplete()" slot="icon-only">
+        Confirmar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

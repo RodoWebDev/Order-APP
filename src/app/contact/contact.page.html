@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()" slot="icon-only">
+        <ion-icon class ="icon" name="arrow-back"></ion-icon>        
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      VOLTAR
+    </ion-title> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-page">
+  <ion-row class="title">
+    <ion-label class="lb-title">complete com os dados do cliente</ion-label>
+  </ion-row>
+  <form #registerForm="ngForm">
+    <ion-row class="search-form">
+      <ion-input  class="search" type="text" placeholder="Building Name" name="Building" [(ngModel)]="buildingName" required></ion-input>        
+    </ion-row>
+    <ion-row class="search-form">
+      <ion-input  class="search" type="text" placeholder="Address" name="Address" [(ngModel)]="address" required></ion-input>        
+    </ion-row>
+    <ion-row class="search-form">
+      <ion-input  class="search" type="text" placeholder="Name (legal responsible)" name="Name" [(ngModel)]="name" required></ion-input>        
+    </ion-row>
+    <ion-row class="search-form">
+      <ion-input  class="search" type="text" placeholder="ID NUMBER" name="ID NUMBER" [(ngModel)]="idNumber" required></ion-input>        
+    </ion-row>
+    <ion-row class="search-form">
+      <ion-input  class="search" type="text" placeholder="Telephone" name="Telephone" [(ngModel)]="telephone" required></ion-input>        
+    </ion-row>
+    <ion-row class="title check-box">
+      <ion-col size="4">
+        <ion-label class="lb-result" (click)="approve()">Approved ?</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-checkbox color="primary" disabled=“true” [checked]="globalService.getImageState()"></ion-checkbox>          
+      </ion-col>
+      <ion-col size="2">
+        <ion-label class="lb-result checkbox-lb">Yes</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-checkbox color="primary" disabled=“true” [checked]="!globalService.getImageState()"></ion-checkbox>          
+      </ion-col>
+      <ion-col size="2">
+        <ion-label class="lb-result checkbox-lb">No</ion-label>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+<ion-footer>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons class ="footer-btn">
+      <ion-button class = "footer-fSize" (click)="postData()" [disabled]="!registerForm.form.valid" slot="icon-only">
+        Enviar pedido
+        <ion-icon class ="icon" name="log-in"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+<!-- { id:"REQ1001", supplier: "Wemasoft1", data:"12-01-19",by:"David",dept:"Fina", status:"xx" } -->
+<!-- REQ1001 Supplier: Wemasoft Date: 12-01-19 -->
+<!-- By: David Dept: Fina Status: XX R4350 -->

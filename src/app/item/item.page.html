@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-toolbar class="new-background-color">
+        <ion-buttons slot="start">
+        <ion-button (click)="back()" slot="icon-only">
+            <ion-icon class ="icon" name="arrow-back"></ion-icon>
+        </ion-button>
+        </ion-buttons>
+        <ion-title>
+            VOLTAR
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="cart()" slot="icon-only">
+                <ion-icon class ="icon" name="cart"></ion-icon>    
+            </ion-button>
+        </ion-buttons>  
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-page">
+    <ion-row class="title">
+        <ion-label class="lb-title">{{globalService.getItem().ItemDescription}}</ion-label>
+        <ion-label class="lb-stitle">{{globalService.getItem().Item}}</ion-label>
+    </ion-row>
+    <!-- <ion-row class="lb-img"></ion-row> -->
+    <ion-row class="r-div">
+        <ion-col>
+            <ion-list inset class="logo">   
+                <ion-row class="r-row">
+                    <ion-col class="esto" size="4">
+                        <ion-row class="ef-text">
+                            <ion-label class="esto-title">{{globalService.getItem().OnHandsQtd}}</ion-label>
+                        </ion-row>
+                        <ion-row class="ef-text">
+                            <ion-label class="esto-desc">no estoque</ion-label>
+                        </ion-row>
+                    </ion-col>
+                    <ion-col class="final" size="4">
+                        <ion-row class="ef-text">
+                            <ion-label class="final-title">R$ {{globalService.getItem().SellingPrice}}</ion-label>
+                        </ion-row>
+                        <ion-row class="ef-text">
+                            <ion-label class="final-desc">Preco final</ion-label>
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="r-row">
+                    <ion-label class="r-data">{{globalService.getItem().ItemDescription}}</ion-label>
+                    <ion-label class="r-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aenean euismod bibendum lacreet.Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.Proin sodales pulvinar tempor....</ion-label>
+                </ion-row>
+                <ion-row class="r-row">
+                    <ion-col class="r-col" size="7">
+                        <ion-label class="r-data">Codigo Manager</ion-label>
+                        <ion-label class="r-desc">{{globalService.getItem().Item}}</ion-label>
+                    </ion-col>
+                    <ion-col class="r-col" size="5">
+                        <ion-label class="r-data">Codigo</ion-label>
+                        <ion-label class="r-desc">{{globalService.getItem().CrossReference}}</ion-label>
+                    </ion-col>
+                </ion-row>
+            </ion-list>
+        </ion-col>        
+    </ion-row>
+</ion-content>
+<ion-footer>
+    <ion-toolbar class="new-background-color">
+        <ion-buttons class ="footer-btn">
+        <ion-button class = "footer-fSize" (click)="openModal()" slot="icon-only">
+            Adicionar ao pedido
+            <ion-icon class ="icon" name="log-in"></ion-icon>
+        </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

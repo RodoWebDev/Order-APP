@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()" slot="icon-only">
+        <ion-icon class ="icon" name="arrow-back"></ion-icon>        
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      VOLTAR
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cart()" slot="icon-only">
+          <ion-icon class ="icon" name="cart"></ion-icon>    
+      </ion-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-page">
+  <ion-row class="title">
+    <ion-label class="lb-title">Digite o codigo da peca que deseja encontrar</ion-label>
+  </ion-row>
+  <ion-row class="search-form">
+    <ion-input  class="search" type="text" placeholder="Search" name="search" [(ngModel)]="searchText" required></ion-input>
+    <ion-button (click)="search()" class="submit-btn" type="button">Entrar</ion-button>
+  </ion-row>
+  <!-- <ion-row class="title">
+    <ion-label class="lb-result">Enoontramos {{globalService.getResultList().length}} resultados.</ion-label>
+  </ion-row> -->
+  <ion-row  *ngFor="let item of globalService.getResultList()" class="r-div" (click)="showItem(item.pid)">
+    <ion-col class="search-btn" size="10">
+      <ion-row>
+        <ion-label class="item-title">{{item.ItemDescription}}</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label class="item-desc">{{item.Item}}</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label class="item-desc">{{item.SellingPrice}}</ion-label>
+      </ion-row>
+    </ion-col>
+    <ion-col size="2" class="arrow-icon">
+      <ion-icon class ="icon-search" name="arrow-round-forward"></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<!-- { id:"REQ1001", supplier: "Wemasoft1", data:"12-01-19",by:"David",dept:"Fina", status:"xx" } -->
+<!-- REQ1001 Supplier: Wemasoft Date: 12-01-19 -->
+<!-- By: David Dept: Fina Status: XX R4350 -->

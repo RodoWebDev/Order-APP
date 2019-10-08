@@ -1,0 +1,30 @@
+
+
+<ion-content padding class="main-view">
+  <div class="overlay" (click)="dismiss()"></div>
+  <div class="modal_content">
+    <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-label class="lb-title">Produto adicionado ao pedido</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label class="lb-stitle">Deseja incluir mais pecas ou finalizar?</ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-icon class ="icon-search" name="checkmark-circle-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <ion-button class="reject" type="button" (click)="reject()">INCLUIR MAIS</ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button class="submit-btn" type="button" (click)="accept()">FINALIZAR</ion-button>
+      </ion-col>      
+      <ion-col col-4></ion-col>
+    </ion-row>    
+  </div>  
+</ion-content>
+  

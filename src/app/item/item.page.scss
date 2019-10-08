@@ -1,0 +1,123 @@
+.new-background-color{
+    --background: #4ac0fe;
+    --color: white;
+}
+.background-page{
+    --background: #def1f6;
+}
+.r-div{
+    background-color: #def1f6;
+    // height: 75px;
+    width:100%;
+}
+.lb-img{
+    background-color: white;
+    width: 30%;
+    height: 75px;
+    position: absolute;
+    z-index: 1;
+    right: 6%;
+    top: 51px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 2px 1px 14px 3px rgba(0, 0, 0, 0.19);
+}
+.title{
+    padding: 20px 0 20px 0;
+    background-color: white;
+}
+.icon{
+    width:30px;
+    height:30px;
+}
+.footer-fSize{
+    font-size:25px;
+    text-transform: capitalize;
+}
+.footer-btn{
+    display: block;
+    text-align: center;
+}
+.icon{
+    width:30px;
+    height:30px;
+}
+.lb-title{
+    width:100%;
+    font-size: 23px;
+    margin-left: 5%;
+    margin-right: 25%;
+    color: #637f93;
+    text-align: left;
+}
+.lb-stitle{
+    width:100%;
+    font-size: 11px;
+    margin-left: 5%;
+    padding-left: 10px;
+    margin-right: 30%;
+    color: #637f93;
+    text-align: left;
+}
+.r-desc{
+    width:100%;
+    font-size: 11px;
+    color: #637f93;
+    text-align: left;
+}
+.submit-btn{
+    --background: #ffa700;
+    --background-activated:  #ffa700;
+    --background-focused: #ffa700;
+    --border-radius: 4px;
+}
+.logo{
+    margin: 0px;
+    background-color: #def1f6;
+    padding-top: 10px;
+}
+.esto{
+    background-color: #7bc014;
+    border-radius: 5px;
+    padding: 15px;
+    color: white;
+    margin-right: 30px;
+}
+.final{
+    background-color: #008f85;
+    border-radius: 5px;
+    padding: 15px;
+    color: white;
+    margin-right: 30px;
+}
+.ef-text{
+    text-align: center;
+    display: block;
+}
+.esto-title{
+    font-size: 25px;
+}
+.final-title{
+    font-size: 23px;
+}
+.r-title{
+    font-size: 30px;
+}
+.r-row{
+    margin-left:5%;
+    padding: 5px;
+    background-color: #def1f6;
+}
+.r-col{
+    padding: 0px;
+    display: grid;
+}
+.r-data{
+    width: 100%;
+    font-size: 13px;
+    color: #637f93;
+}
+.r-paper{
+    text-align: center;
+}
+.r-button{
+    text-align: center;
+}

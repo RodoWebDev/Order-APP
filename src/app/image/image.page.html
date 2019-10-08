@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()" slot="icon-only">
+        <ion-icon class ="icon" name="arrow-back"></ion-icon>        
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      VOLTAR
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-page">
+  <ion-img class = "imgPhoto" [src]="globalService.getImage()"></ion-img>
+  <ion-row>
+      <ion-col class="signup-col">
+          <ion-button (click)="delete()" expand="full" class="button" type="submit">Delete Photo</ion-button>
+      </ion-col>
+  </ion-row>
+</ion-content>
+<!-- { id:"REQ1001", supplier: "Wemasoft1", data:"12-01-19",by:"David",dept:"Fina", status:"xx" } -->
+<!-- REQ1001 Supplier: Wemasoft Date: 12-01-19 -->
+<!-- By: David Dept: Fina Status: XX R4350 -->

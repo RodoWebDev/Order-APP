@@ -1,0 +1,116 @@
+.new-background-color{
+    --background: #4ac0fe;
+    --color: white;
+}
+.background-page{
+    --background: #def1f6;
+}
+.r-div{
+    background-color: #ffffff;
+    // height: 75px;
+    border-bottom: 1px solid gray;
+}
+.r-content{
+    height: 130px;
+    background-color:#f5f4f4;
+    border: solid 1px lightGray;
+    width:100%;
+}
+.r-date{
+    height: 30px;
+    width:100%;
+    background-color:lightgray;
+}
+.r-no{
+    border: solid 1px lightGray;
+    display: flex!important;
+    align-content: center!important;
+    align-items: center!important;
+    text-align: center!important;
+}
+.r-id{
+    width:100%;
+}
+.r-date{
+    border: solid 1px lightGray;
+    display: flex!important;
+    align-content: center!important;
+    align-items: center!important;
+    padding-left: 10px;
+}
+.r-calendar{
+    color: #54d61c;
+}
+.r-row{
+    padding: 5px;
+}
+.r-img{
+    display: flex!important;
+    align-items: flex-end !important;
+    text-align: center!important;
+}
+.submit-btn{
+    --background: #ffa700;
+    --background-activated:  #ffa700;
+    --background-focused: #ffa700;
+    --border-radius: 4px;
+    margin-right: 4%;
+    z-index: 9;
+    position: absolute;
+    right: 0px;
+}
+.search{
+    width:100%;
+    background-color:#ffffff;
+    // box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 2px 1px 14px 3px rgba(0, 0, 0, 0.19);
+    height: 36px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 4px;
+    text-align: left;
+    color: #637f93;
+}
+.search-form,
+.title{
+    padding: 20px 0 20px 0;
+}
+.lb-title{
+    width:100%;
+    font-size: 25px;
+    margin-left: 5%;
+    margin-right: 25%;
+    color: #637f93;
+    text-align: left;
+}
+.lb-result{
+    width:100%;
+    margin-left: 5%;
+    color: #637f93;
+    text-align: left;
+}
+.item-title{
+    margin-left: 5%;
+    color: #637f93;
+    font-size: 16px;
+    padding: 5px 0px 5px 0px;
+}
+.item-desc{
+    margin-left: 5%;
+    color: #637f93;
+    font-size: 13px;
+    padding: 2px 0px 2px 0px;
+}
+.icon{
+    width:30px;
+    height:30px;
+}
+.icon-search{
+    width:30px;
+    height:30px;
+    width:100%;
+    background-color:#ffffff;
+    margin-right: 10%;
+    margin-top: 16px;
+    text-align: left;
+    color: #637f93;
+}

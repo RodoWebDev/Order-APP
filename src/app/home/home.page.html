@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-button (click)="logout()" slot="icon-only">
+        <ion-icon class ="icon" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="cart()" slot="icon-only">
+        <ion-icon class ="icon" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background-page">
+  <ion-row class="title">
+    <ion-label class="lb-title">Faca uma pesquisa no catalogo de produtos</ion-label>
+  </ion-row>
+  <ion-row class="logo-blank"></ion-row>
+  <ion-row (click)="toListPage('item')" class="btn-search">
+    <ion-col class="search-btn" size="10">
+      <ion-label class="logo_text">Pelo codigo da peca</ion-label>
+    </ion-col>
+    <ion-col size="2" class="arrow-icon">
+      <ion-icon class ="icon search" name="arrow-dropright"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-row (click)="toListPage('desc')" class="btn-search">
+    <ion-col class="search-btn" size="10">
+      <ion-label class="logo_text">Pelo nome ou descricao da peca</ion-label>
+    </ion-col>
+    <ion-col size="2" class="arrow-icon">
+      <ion-icon class ="icon search" name="arrow-dropright"></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-content>

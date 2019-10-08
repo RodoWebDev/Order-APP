@@ -1,0 +1,151 @@
+.new-background-color{
+    --background: #4ac0fe;
+    --color: white;
+}
+.r-data{
+    width: 100%;
+    font-size: 13px;
+    color: #637f93;
+}
+.r-desc{
+    width:100%;
+    font-size: 11px;
+    color: #637f93;
+    text-align: left;
+}
+.unit-item{
+    width:100%;
+    font-size: 15px;
+    color: #637f93;
+    text-align: left;
+}
+.unit-item > input{
+    padding:none;
+}
+.f-title{
+    color:white;
+}
+.f-desc{
+    color:white;
+    font-size: 20px;
+}
+.r-div{
+    width:100%;
+    padding: 10px 0px 10px 0px;
+    border-top: #637f93 1px solid;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.f-div{
+    width:100%;
+    padding: 10px 0px 10px 0px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top:unset;
+}
+.logo{
+    margin: 0px;
+    // padding-top: 30px;
+}
+.lb-title{
+    width:100%;
+    font-size: 33px;
+    margin-left: 5%;
+    margin-right: 30%;
+    color: #ffa700;
+    text-align: left;
+}
+.icon-search{
+    width:30px;
+    height:30px;
+    width:100%;
+    text-align: left;
+    color: #637f93;
+}
+.icon-camera{
+    width:30px!important;
+    height:30px;
+    text-align: left;
+    color: #637f93;
+}
+.icon-gray{
+    color: lightgray;
+}
+.icon{
+    width:30px;
+    height:30px;
+}
+.unit{
+    padding: 15px 5px 15px 0;
+}
+.count{
+    text-align: left;
+    display: flex;
+    padding: 15px 2px 15px 0;
+}
+.border{
+    border: 1px solid #637f93;
+    border-radius: 5px;
+    // padding: 6px 6px 6px 10px;
+}
+.r-count{
+    font-size: 26px;
+    height: 30px;
+    color: #637f93;
+}
+.r-title{
+    font-size: 30px;
+}
+.title{
+    padding: 20px 0 20px 0;
+}
+.r-row{
+    text-align: left;
+    padding: 5px 0 5px 0;
+}
+.r-camera{
+    text-align: left;
+    padding: 5px 0 5px 0;
+}
+.r-paper{
+    text-align: center;
+}
+.submit-btn{
+    --background: #ffffff;
+    --background-activated: #def1f6;
+    --background-focused: #def1f6;
+    --box-shadow: white;
+    border: 2px solid #637f93;
+    border-radius: 5px;
+    color: #637f93;
+    width: 100%;
+    font-size: 8px;
+    text-align: center;
+    display: grid;
+}
+.back{
+    color: white;
+    background-color: #637f93;
+    --background: #637f93;
+}
+.r-button{
+    text-align: center;
+}
+.imgPhoto{
+    width:100%;
+    height: 47px;
+}
+.footer-fSize{
+    font-size:25px;
+    text-transform: capitalize;
+}
+.footer-btn{
+    display: block;
+    text-align: center;
+}
+.r-item-row{
+    width:100%;
+}
+.button-native{
+    padding:none;
+}

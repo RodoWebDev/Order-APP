@@ -1,0 +1,99 @@
+<ion-header>
+    <ion-toolbar class="new-background-color">
+        <ion-buttons slot="start">
+        <ion-button (click)="back()" slot="icon-only">
+            <ion-icon class ="icon" name="arrow-back"></ion-icon>
+        </ion-button>
+        </ion-buttons>
+        <ion-title>
+        VOLTAR
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+    
+<ion-content>
+    <ion-row class="title">
+        <ion-label class="lb-title">FINALIZAR PEDIDO</ion-label>
+    </ion-row>
+    <ion-row  *ngFor="let item of globalService.getOrderList()" class="r-div">
+        <ion-row class="r-item-row">
+            <ion-col>
+                <ion-list inset class="logo">   
+                    <ion-row class="r-row">
+                        <ion-label class="r-data">{{item.ItemDescription}}</ion-label>
+                        <ion-label class="r-desc">{{item.Item}}</ion-label>
+                        <ion-label class="r-desc">{{item.SellingPrice}}</ion-label>
+                    </ion-row>
+                </ion-list>
+            </ion-col>
+            <ion-col class="count">
+                <ion-icon class ="icon-search" name="add-circle" (click)="addCount(item.pid)"></ion-icon>
+                <ion-label class="r-count">  {{item.count}}  </ion-label>
+                <ion-icon class ="icon-search icon-gray" name="remove-circle" (click)="minuseCount(item.pid)"></ion-icon>
+                <ion-icon class ="icon-search icon-gray" name="trash" (click)="deleteItem(item.pid)"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-row class="r-item-row">
+            <ion-col class="unit" size="6">
+                <ion-list inset class="logo border">   
+                    <ion-row class="r-camera">
+                        <!-- <ion-label class="r-data">Unit</ion-label> -->
+                        <ion-input class="unit-item" type="text" placeholder="Unit" name="search" [value]="item.unit" (input)="setUnit($event.target.value,item.pid)"></ion-input>                        
+                    </ion-row>
+                </ion-list>
+            </ion-col>
+            <ion-col class="count" size="2">
+                <ion-buttons *ngIf="globalService.getCurrentOrderItemPhoto(item.pid,1)" class ="submit-btn">
+                    <ion-button class = "footer-fSize" (click)="getPhoto(item.pid,1)" slot="icon-only">
+                        <ion-icon class ="icon-camera" name="camera"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+                <ion-buttons *ngIf="!globalService.getCurrentOrderItemPhoto(item.pid,1)" class ="submit-btn">
+                    <ion-img class = "imgPhoto" [src]="globalService.getPhoto(item.pid,1)" (click)="goImage(item.pid,1)"></ion-img>
+                </ion-buttons>
+            </ion-col>
+            <ion-col class="count" size="2">
+                <ion-buttons *ngIf="globalService.getCurrentOrderItemPhoto(item.pid,2)" class ="submit-btn">
+                    <ion-button class = "footer-fSize" (click)="getPhoto(item.pid,2)" slot="icon-only">
+                        <ion-icon class ="icon-camera" name="camera"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+                <ion-buttons *ngIf="!globalService.getCurrentOrderItemPhoto(item.pid,2)" class ="submit-btn">
+                    <ion-img class = "imgPhoto" [src]="globalService.getPhoto(item.pid,2)" (click)="goImage(item.pid,2)"></ion-img>
+                </ion-buttons>
+            </ion-col>
+            <ion-col class="count" size="2">
+                <ion-buttons *ngIf="globalService.getCurrentOrderItemPhoto(item.pid,3)" class ="submit-btn">
+                    <ion-button class = "footer-fSize" (click)="getPhoto(item.pid,3)" slot="icon-only">
+                        <ion-icon class ="icon-camera" name="camera"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+                <ion-buttons *ngIf="!globalService.getCurrentOrderItemPhoto(item.pid,3)" class ="submit-btn">
+                    <ion-img class = "imgPhoto" [src]="globalService.getPhoto(item.pid,3)" (click)="goImage(item.pid,3)"></ion-img>
+                </ion-buttons>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+</ion-content>
+<ion-footer>
+    <ion-toolbar class="new-background-color">
+        <ion-row class="f-div">
+            <ion-col class="unit" size="6">
+                <ion-title class="r-data f-title">
+                    Total do pedido
+                </ion-title>
+                <ion-title class="r-desc f-desc">
+                    R$ {{globalService.getOrderListSumPrice()}}
+                </ion-title>
+            </ion-col>
+            <ion-col class="count" size="6">
+                <ion-buttons class ="footer-btn">
+                    <ion-button class = "footer-fSize" (click)="continue()" slot="icon-only">
+                        CONTINUAR
+                    </ion-button>
+                </ion-buttons>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>
+    
